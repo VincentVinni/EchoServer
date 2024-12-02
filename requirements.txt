@@ -1,0 +1,16 @@
+# Flask and extensions
+Flask==2.3.3                 # Web framework for building the API
+Flask-SQLAlchemy==3.0.6      # Optional: For traditional relational DBs (if used in the future)
+Flask-Cors==3.0.10           # Optional: Enable Cross-Origin Resource Sharing (CORS) if needed
+
+# Supabase
+supabase==0.2.7              # Supabase Python client
+
+# Environment Variable Management
+python-dotenv==1.0.0         # Load .env files for environment variables
+
+# Data Validation (Optional, for schema validation)
+marshmallow==3.20.1          # For defining and validating schemas
+
+# Additional Utilities
+requests==2.31.0             # Optional: For handling HTTP requests (if needed)

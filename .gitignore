@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Supabase secret key files (if any)
+.supabase/
+
+# Logs
+*.log
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+
+# Byte-compiled Python files
+*.pyc
+*.pyo
+
+# macOS system files
+.DS_Store

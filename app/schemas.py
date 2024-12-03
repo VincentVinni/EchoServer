@@ -13,3 +13,5 @@ class EchoSchema(Schema):
     expires_at = fields.DateTime(required=True)
     # Add other fields as needed
     user_id = fields.Integer(required=True)
+    type = fields.String(required=True, validate=validate.OneOf(["text", "image", "video"]))
+    public_url = fields.String(required=False)

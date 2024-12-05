@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables (make sure to set these in your .env or environment)
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+SUPABASE_URL = "https://foweikjmjpvxscdguhby.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvd2Vpa2ptanB2eHNjZGd1aGJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMxMTUyODMsImV4cCI6MjA0ODY5MTI4M30.Tgsd34-cDkFdI2dGmlVPaw7I_wXu5w_07rtLaX61nBM"
 
 # Initialize Supabase client
 def get_supabase_client() -> Client:

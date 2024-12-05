@@ -22,7 +22,7 @@ def upload_photo_to_bucket(file_path):
 
 
 """Echo Database Models and Functions"""
-def create_text_echo(user_id, message, expires_at, type="text", public_url=None, path_to_file=None):
+def create_text_echo(user_id, message, expires_at, type="text", public_url="", path_to_file=""):
     """Insert a new echo into the Supabase database."""
     response = (supabase.table("Echo").insert({"user_id": user_id, "message": message, "expires_at": expires_at, "type": type, "public_url": public_url,"bucket_path": path_to_file}).execute())
 
@@ -59,7 +59,7 @@ def get_specific_echo(user_id, echo_id):
 def upload_photo_echo():
     """Upload a photo to S3."""
     unique_filename = f"{uuid.uuid4()}.jpg"  # Generate a unique filename
-    file_path = os.path.join(os.path.dirname(__file__), 'assets/banana.png') # Dynamically construct the full path
+    file_path = os.path.join(os.path.dirname(__file__), 'assets/sunset.png') # Dynamically construct the full path
     file_path = os.path.abspath(file_path) # Ensure the path is normalized
     
     # Validate that the file exists

@@ -22,9 +22,9 @@ def upload_photo_to_bucket(file_path):
 
 
 """Echo Database Models and Functions"""
-def create_text_echo(user_id, message, expires_at, type="text", public_url="", path_to_file=""):
+def create_text_echo(title, user_id, message, expires_at, type="text", public_url="", path_to_file=""):
     """Insert a new echo into the Supabase database."""
-    response = (supabase.table("Echo").insert({"user_id": user_id, "message": message, "expires_at": expires_at, "type": type, "public_url": public_url,"bucket_path": path_to_file}).execute())
+    response = (supabase.table("Echo").insert({"title": title, "user_id": user_id, "message": message, "expires_at": expires_at, "type": type, "public_url": public_url,"bucket_path": path_to_file}).execute())
 
     response_data = response.json()
     if isinstance(response_data, str):  # If it's a string, parse it

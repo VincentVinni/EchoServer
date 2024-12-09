@@ -5,8 +5,8 @@ def create_text_echo_controller(type="text", public_url="", path_to_file=""):
     """Handles the request to create a new echo."""
     try:
         data = request.json
-        user_id, message, expires_at = data["user_id"], data["message"], data["expires_at"]
-        echo = create_text_echo(user_id, message, expires_at, type, public_url, path_to_file)
+        title, user_id, message, expires_at = data["title"], data["user_id"], data["message"], data["expires_at"]
+        echo = create_text_echo(title, user_id, message, expires_at, type, public_url, path_to_file)
 
         if type=="photo" or type=="video":
             return echo 
